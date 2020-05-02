@@ -10,6 +10,9 @@ function adding(e) {
     let input = box.value;
     let text = document.createTextNode(input);
 
+    let close = document.createElement("i");
+    close.setAttribute("class", "remove mdi mdi-close-circle-outline");
+
     let new_li = document.createElement("li");
     let form = document.createElement("div");
     form.setAttribute("class", "form-check");
@@ -25,6 +28,7 @@ function adding(e) {
     helper.setAttribute("class", "input-helper");
 
     new_li.appendChild(form);
+    new_li.appendChild(close);
 
     label1.appendChild(checkbox);
     label1.appendChild(helper);
