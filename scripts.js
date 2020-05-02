@@ -14,16 +14,28 @@ function adding(e) {
     let form = document.createElement("div");
     form.setAttribute("class", "form-check");
 
+    let checkbox = document.createElement("input");
+    checkbox.setAttribute("class", "checkbox");
+    checkbox.setAttribute("type", "checkbox");
+
     let label1 = document.createElement("label");
-    label1.setAttribute("class", "form-check-label")
+    label1.setAttribute("class", "form-check-label");
+
+    helper = document.createElement("i");
+    helper.setAttribute("class", "input-helper");
 
     new_li.appendChild(form);
+
+    label1.appendChild(checkbox);
+    label1.appendChild(helper);
     form.appendChild(label1);
+
+
     label1.appendChild(text);
 
     full_list.appendChild(new_li);
 
-    alert(label1.value)
+    alert(label1.value);
 }
 
 
